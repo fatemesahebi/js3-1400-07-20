@@ -61,4 +61,16 @@ function iterateElement2(myArray){
     return result
 }
 console.log(iterateElement2((b)))
+//------------------------------روش دوم با کمک map---------------------------------------
+function iterateElement3(myArray) {
+    let result={}
+    myArray.map(item=>
+        {if(result[item])result[item]++
+            else result[item]=1
+        }
+    )
+    return result
+}
+console.log(iterateElement3((b)))
+
 
