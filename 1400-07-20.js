@@ -51,4 +51,14 @@ function iterateElement(myArray){
 }
 let b=[1,1,2,2,2,3,3,3,3,4]
 console.log(iterateElement((b)))
+//------------------------------روش دوم با کمک ردیوس---------------------------------------
+function iterateElement2(myArray){
+    let result=myArray.reduce(function (preVal,currentVal){
+      if(preVal[currentVal]===undefined) preVal[currentVal]=1
+      else preVal[currentVal]++
+        return preVal
+    },{})
+    return result
+}
+console.log(iterateElement2((b)))
 
